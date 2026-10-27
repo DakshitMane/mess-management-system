@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MarkAttendance"
+    android:background="@android:color/white">
+
+    <View
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/bg_view"
+        android:layout_marginTop="-40dp"/>
+
+    <TextView
+        android:id="@+id/textview1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Mark Attendance"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="40dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextCustomerId"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextCustomerIdInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter customer id" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/textViewLunch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextCustomerId"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Lunch"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <!-- Buttons for lunch attendance -->
+    <LinearLayout
+        android:id="@+id/layoutLunchButtons"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/textViewLunch"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnPresentLunch"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:text="Present"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp" />
+
+        <Button
+            android:id="@+id/btnAbsentLunch"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:text="Absent"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp" />
+    </LinearLayout>
+
+    <!-- Text view for dinner -->
+    <TextView
+        android:id="@+id/textViewDinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutLunchButtons"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Dinner"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <!-- Buttons for dinner attendance -->
+    <LinearLayout
+        android:id="@+id/layoutDinnerButtons"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/textViewDinner"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnPresentDinner"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:text="Present"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:layout_marginRight="5dp" />
+
+        <Button
+            android:id="@+id/btnAbsentDinner"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:text="Absent"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp" />
+    </LinearLayout>
+    </RelativeLayout>
+
+
